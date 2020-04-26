@@ -23,7 +23,7 @@ def main():
     m_handler = MessageHandler(Filters.all, message_handler)
     my_update.dispatcher.add_handler(m_handler)
 
-    my_update.start_polling(timeout=100)
+    my_update.start_polling()
     my_update.idle()
 
 
