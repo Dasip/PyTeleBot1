@@ -24,14 +24,15 @@ def main():
     my_update = Updater(
         token=TOKEN,
         use_context=True,
-        base_url=TG_API
+        #base_url=TG_API
     )
 
     m_handler = MessageHandler(Filters.text, message_handler)
     c_handler = CommandHandler("start", start_handler)
 
-    my_update.dispatcher.add_handler(m_handler)
     my_update.dispatcher.add_handler(c_handler)
+    my_update.dispatcher.add_handler(m_handler)
+
 
     my_update.start_polling()
     my_update.idle()
