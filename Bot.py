@@ -4,7 +4,7 @@ from telegram.ext import MessageHandler, CommandHandler
 from telegram.ext import Filters
 
 
-TOKEN = "1203054967:AAE6HsWJxFcL8FoNWLlv9_gxPuHcjrdxe6Y"
+TOKEN = "TOKEN"
 TG_API = "https://telegg.ru/orig/bot"
 
 
@@ -25,6 +25,7 @@ def main():
         token=TOKEN,
         use_context=True,
         #base_url=TG_API
+        # Убрать комментарий для деплоя на сервер
     )
 
     m_handler = MessageHandler(Filters.text, message_handler)
