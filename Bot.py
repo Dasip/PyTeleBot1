@@ -18,7 +18,8 @@ def main():
     my_update = Updater(
         token=TOKEN,
         use_context=True,
-        base_url=TG_API)
+        #base_url=TG_API
+    )
 
     m_handler = MessageHandler(Filters.all, message_handler)
     my_update.dispatcher.add_handler(m_handler)
